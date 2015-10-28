@@ -22,7 +22,7 @@ describe SessionsController do
 
     context "with valid credentials" do
       it "puts the signed in user in the session" do
-        expect(session[:user_id]).to eq(alice.id)
+        expect(session[:user_id]).not_to be_blank
       end
 
       it "redirects to the home page" do
